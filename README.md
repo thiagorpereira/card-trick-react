@@ -46,3 +46,6 @@ $ yarn install
 # Run the app
 $ yarn start
 ```
+
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
