@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import Container from '../../components/Container';
+import ContainerLayout from '../../components/ContainerLayout';
 import { StartButton } from './styles';
 
 const Home = () => {
 
   return (
-    <Container>
-         <Link to={'/game'}>
-        
-        <StartButton>Começar</StartButton>
+    <ContainerLayout>
+         <Link to={'/game'} style={{ textDecoration: 'none'}}>
+          <StartButton>Começar</StartButton>
         </Link>
-    </Container>
+    </ContainerLayout>
   );
 }
 

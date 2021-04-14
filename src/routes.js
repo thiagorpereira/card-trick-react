@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Game from './pages/Game';
+import MindReading from './pages/MindReading';
 
 export default function Routes() {
   return (
@@ -10,6 +11,7 @@ export default function Routes() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/game" component={Game} />
+        <Route path="/mind_reading" component={MindReading} />
       </Switch>
     </BrowserRouter>
   );

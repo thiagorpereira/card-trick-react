@@ -1,6 +1,7 @@
 import React,  { useState, useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 import api from '../../services/api';
-import Container from '../../components/Container';
+import ContainerLayout from '../../components/ContainerLayout';
 import { List, ContainerCards } from './styles';
 /* 
 import { Container } from './styles'; */
@@ -9,6 +10,8 @@ function Game() {
   const [deck21, setDeck21] = useState([])
   const [loading, setLoading] = useState(false)
   const [round, setRound] = useState(1)
+  const history = useHistory();
+  
 
   useEffect(() => {
     const getDeck = async () => {
@@ -44,30 +47,34 @@ function Game() {
     if (n === 3) {
       stackFinal = stack1.concat(stack3).concat(stack2)
     }
-   if (round !== 3) {
 
-      const stack1 = []
-      const stack2 = []
-      const stack3 = []
+    if (round !== 3) {
 
-      for (var i = 3; i < stackFinal.length + 1 ; i = i + 3) {
-        console.log('i', i)
-        // primeira i = 3
-        stack1.push(stackFinal[i-3]) // i -3
-        stack2.push(stackFinal[i-2]) // i -2
-        stack3.push(stackFinal[i-1]) // i -1
+        const stack1 = []
+        const stack2 = []
+        const stack3 = []
+
+        for (var i = 3; i < stackFinal.length + 1 ; i = i + 3) {
+          console.log('i', i)
+          // primeira i = 3
+          stack1.push(stackFinal[i-3]) // i -3
+          stack2.push(stackFinal[i-2]) // i -2
+          stack3.push(stackFinal[i-1]) // i -1
+        }
+    
+        const stackFinal2 = stack1.concat(stack2).concat(stack3)
+        setTimeout(() => {  setDeck21(stackFinal2) }, 2000);
+
+      } else {
+        setTimeout(() => {  setDeck21(stackFinal)}, 2000);
+        history.push("/mind_reading", {
+          card: stackFinal[10]
+        });
       }
-  
-      const stackFinal2 = stack1.concat(stack2).concat(stack3)
-      setTimeout(() => {  setDeck21(stackFinal2) }, 2000);
-
-    } else {
-      setTimeout(() => {  setDeck21(stackFinal)}, 2000);
-    }
   }
 
   return (
-   <Container> 
+   <ContainerLayout> 
      <ContainerCards>
        <h1>{round}</h1>
         <List onClick={() => setStackInMiddle(1)}>
@@ -98,7 +105,7 @@ function Game() {
           ))}
         </List> 
      </ContainerCards> 
-    </Container> 
+    </ContainerLayout> 
 
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { RectangleLarge, RectangleMedium, RectangleSmall, RectangleSmaller } from './styles';
 
-function Container({ children }) {
+function ContainerLayout({ children }) {
   return (
     <RectangleLarge>
       <RectangleMedium>
@@ -15,4 +15,4 @@ function Container({ children }) {
   );
 }
 
-export default Container;
+export default ContainerLayout;

@@ -8,14 +8,21 @@ export const List = styled.ul`
    @media (max-width: 600px) { 
       flex-direction: column;
   }  
+  background: rgba(196, 196, 196, 0.4);
+  border-radius: 27px;
+  padding: 10px;
+  &:hover {
+    background: gray;
+    cursor: pointer;
+  }
   li {
-    padding: 15px 0;
+    padding: 5px;
     align-items: center;
     font-size: 20px;
     /*Segundo Li pra frente */
-    & + li {
+/*     & + li {
       border-top: 1px solid #eee;
-    }
+    } */
     a {
       color: #003459;
       text-decoration: none;
