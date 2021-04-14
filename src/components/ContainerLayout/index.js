@@ -1,5 +1,4 @@
 import React from 'react';
-import { Container } from '../../pages/MindReading/styles';
 import { TitleGame, ContainerApp, RectangleLarge, RectangleMedium, RectangleSmall, RectangleSmaller } from './styles';
 
 function ContainerLayout({ children }) {

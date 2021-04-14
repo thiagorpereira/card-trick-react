@@ -8,14 +8,12 @@ import { Container } from './styles'; */
 
 function Game() {
   const [deck21, setDeck21] = useState([])
-  const [loading, setLoading] = useState(false)
   const [round, setRound] = useState(1)
   const history = useHistory();
   
 
   useEffect(() => {
     const getDeck = async () => {
-      setLoading(true)
       const resp = await api.get('/deck/new/shuffle/?deck_count=1')
       const {deck_id} = resp.data
       await api.get(`/deck/${deck_id}/draw/?count=21`).then(response => {
@@ -23,7 +21,6 @@ function Game() {
       })
     }
     getDeck()
-    setLoading(false)
   }, [])
 
   const setStackInMiddle = (n) => {
