@@ -43,4 +43,9 @@ export const BackButton = styled.button`
   align-items: center;
   text-align: center;
   color: #FFFFFF;
+  &:hover {
+    background-color: rgba(211,211,211,0.5);
+    border: 0px;
+    cursor: pointer;
+  }
 `;

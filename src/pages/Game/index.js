@@ -76,7 +76,6 @@ function Game() {
   return (
    <ContainerLayout> 
      <ContainerCards>
-       <h1>{round}</h1>
         <List onClick={() => setStackInMiddle(1)}>
           {deck21 && deck21.slice(0,7).map(card => (
             <li key={card.value}>

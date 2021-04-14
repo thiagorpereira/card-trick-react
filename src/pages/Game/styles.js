@@ -14,11 +14,11 @@ export const List = styled.ul`
   &:hover {
     background: gray;
     cursor: pointer;
+    padding: 17px;
   }
   li {
     padding: 5px;
     align-items: center;
-    font-size: 20px;
     /*Segundo Li pra frente */
 /*     & + li {
       border-top: 1px solid #eee;

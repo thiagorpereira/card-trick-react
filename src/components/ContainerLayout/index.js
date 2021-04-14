@@ -1,17 +1,21 @@
 import React from 'react';
-import { RectangleLarge, RectangleMedium, RectangleSmall, RectangleSmaller } from './styles';
+import { Container } from '../../pages/MindReading/styles';
+import { TitleGame, ContainerApp, RectangleLarge, RectangleMedium, RectangleSmall, RectangleSmaller } from './styles';
 
 function ContainerLayout({ children }) {
   return (
-    <RectangleLarge>
-      <RectangleMedium>
-        <RectangleSmall>
-          <RectangleSmaller>
-            {children}
-          </RectangleSmaller>
-        </RectangleSmall>
-      </RectangleMedium>
-    </RectangleLarge>
+    <ContainerApp>
+      <TitleGame>MAGIC TRICK</TitleGame>
+      <RectangleLarge>
+        <RectangleMedium>
+          <RectangleSmall>
+            <RectangleSmaller>
+              {children}
+            </RectangleSmaller>
+          </RectangleSmall>
+        </RectangleMedium>
+      </RectangleLarge>
+    </ContainerApp>
   );
 }
 
