@@ -12,6 +12,9 @@ export const RectangleLarge = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px) {
+    width: 600px
+  } 
 /*   h1 {
     display: flex;
     flex-direction: row;
@@ -35,6 +38,9 @@ export const RectangleMedium = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.1);
 /*   box-sizing: border-box; */
   border-radius: 512px;
+  @media (max-width: 600px) {
+    width: 600px
+  } 
 `;
 
 export const RectangleSmall = styled.div`
@@ -48,6 +54,9 @@ export const RectangleSmall = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px) {
+    width: 600px
+  } 
 `;
 export const RectangleSmaller = styled.div`
   background: linear-gradient(180deg, rgba(54, 59, 103, 0.9) 0%, rgba(51, 57, 101, 0.9) 100%);
@@ -60,6 +69,9 @@ export const RectangleSmaller = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 600px) {
+    width: 600px
+  } 
 `;
 
 

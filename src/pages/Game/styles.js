@@ -5,6 +5,9 @@ export const List = styled.ul`
   margin-top: 30px;
   display: flex;
   flex-direction: row; //trocar no query
+   @media (max-width: 600px) { 
+      flex-direction: column;
+  }  
   li {
     padding: 15px 0;
     align-items: center;
@@ -26,22 +29,24 @@ export const List = styled.ul`
   `;
 
 export const ContainerCards = styled.div`
-  width: 1169px;
-  height: 706px;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: 600px) {
+      flex-direction: column;
+    } 
+    @media (max-width: 600px) {
+      flex-direction: row;
+    }  
 
   img {
       width: 75px;
       height: 100px;
     }
-  
-  // descomentar no query
-/*   display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 10px;  */
+
 `;
+
+
